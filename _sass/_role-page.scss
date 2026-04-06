@@ -1,0 +1,115 @@
+// Role page chrome and section navigation
+
+.role-header {
+  background: $white;
+  border-bottom: 4px solid var(--accent, #aaa);
+  padding: $space-10 0 $space-8;
+
+  .back-link {
+    display: inline-block;
+    font-size: $text-sm;
+    color: $color-text-muted;
+    text-decoration: none;
+    margin-bottom: $space-5;
+
+    &:hover {
+      color: $color-link;
+    }
+  }
+
+  .role-label {
+    font-size: $text-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $color-text-muted;
+    margin-bottom: $space-2;
+  }
+
+  h1 {
+    font-size: $text-4xl;
+    margin-bottom: $space-3;
+  }
+
+  .role-tagline {
+    font-size: $text-lg;
+    color: $color-text-muted;
+    font-style: italic;
+    margin-bottom: 0;
+  }
+}
+
+// Two-column body: sidebar nav + main content
+.role-body {
+  display: grid;
+  grid-template-columns: $nav-width 1fr;
+  gap: $content-gap;
+  padding-top: $space-10;
+  padding-bottom: $space-16;
+  align-items: start;
+
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+
+    .section-nav {
+      display: none;
+    }
+  }
+}
+
+// Sticky section nav sidebar
+.section-nav {
+  position: sticky;
+  top: $space-8;
+}
+
+.section-nav-list {
+  .section-nav-heading {
+    font-size: $text-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $color-text-muted;
+    margin-bottom: $space-3;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: $space-1;
+  }
+
+  a {
+    font-size: $text-sm;
+    color: $color-text-muted;
+    text-decoration: none;
+    line-height: $leading-snug;
+    display: block;
+    padding: $space-1 0;
+
+    &:hover {
+      color: $color-link;
+    }
+  }
+}
+
+// Capability sections within the main content column
+.capability-section {
+  margin-bottom: $space-12;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-title {
+  font-size: $text-xl;
+  color: $color-text-muted;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: $space-3;
+  margin-bottom: $space-6;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+}

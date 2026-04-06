@@ -1,0 +1,12 @@
+<a class="role-card" href="{{ site.baseurl }}{{ include.role.url }}" style="--accent: {{ include.role.accent_color }}">
+  <div class="role-card-inner">
+    <p class="role-card-label">Translation Layer</p>
+    <h2 class="role-card-title">{{ include.role.role_short }}</h2>
+    <ul class="role-card-sections">
+      {% for section in include.role.sections %}
+        <li>{{ section.title }}</li>
+      {% endfor %}
+    </ul>
+    <span class="role-card-cta">View role &rarr;</span>
+  </div>
+</a>

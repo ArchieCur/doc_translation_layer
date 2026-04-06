@@ -1,0 +1,81 @@
+// Page containers and grid
+
+.container {
+  max-width: $container-max;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $space-6;
+  padding-right: $space-6;
+}
+
+.page-wrapper {
+  min-height: calc(100vh - 120px); // rough header + footer height
+}
+
+// Site header
+.site-header {
+  background: $white;
+  border-bottom: 1px solid $color-border;
+  padding: $space-4 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.site-name {
+  font-family: $font-serif;
+  font-size: $text-lg;
+  font-weight: normal;
+  color: $color-text-heading;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-link;
+  }
+}
+
+.site-nav {
+  a {
+    font-size: $text-sm;
+    color: $color-text-muted;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-link;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Site footer
+.site-footer {
+  border-top: 1px solid $color-border;
+  padding: $space-8 0;
+  margin-top: $space-16;
+
+  .container {
+    text-align: center;
+  }
+
+  p {
+    font-size: $text-sm;
+    color: $color-text-muted;
+    margin-bottom: $space-2;
+
+    a {
+      color: $color-text-muted;
+
+      &:hover {
+        color: $color-link;
+      }
+    }
+  }
+
+  .footer-credit {
+    font-size: $text-xs;
+    color: $gray-400;
+  }
+}

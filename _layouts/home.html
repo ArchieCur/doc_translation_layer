@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="home-page">
+  <header class="site-hero">
+    <div class="container">
+      <h1>{{ site.title }}</h1>
+      <p class="site-description">{{ site.description }}</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="role-grid">
+      {% assign roles = site.roles | sort: "order" %}
+      {% for role in roles %}
+        {% include role-card.html role=role %}
+      {% endfor %}
+    </div>
+
+    <div class="compare-link-row">
+      <a href="{{ site.baseurl }}/compare/" class="compare-link">
+        Compare capabilities across roles &rarr;
+      </a>
+    </div>
+  </main>
+</div>

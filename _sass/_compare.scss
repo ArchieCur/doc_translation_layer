@@ -1,0 +1,158 @@
+// Comparison view layout
+
+.compare-page {
+  padding-bottom: $space-16;
+}
+
+.compare-header {
+  background: $white;
+  border-bottom: 1px solid $color-border;
+  padding: $space-10 0 $space-8;
+
+  h1 {
+    font-size: $text-3xl;
+    margin-bottom: $space-3;
+  }
+
+  .compare-description {
+    font-size: $text-lg;
+    color: $color-text-muted;
+    max-width: 600px;
+  }
+}
+
+.compare-body {
+  padding-top: $space-10;
+}
+
+// Capability group — one per shared capability_id
+.compare-capability {
+  margin-bottom: $space-3;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $white;
+  overflow: hidden;
+}
+
+.compare-capability-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $space-4 $space-6;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:hover {
+    background: $gray-50;
+  }
+}
+
+.compare-capability-title {
+  font-family: $font-serif;
+  font-size: $text-lg;
+  color: $color-text-heading;
+  font-weight: normal;
+}
+
+.compare-capability-roles {
+  font-size: $text-xs;
+  color: $color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.compare-expand-icon {
+  font-size: $text-sm;
+  color: $color-text-muted;
+  transition: transform $transition-base;
+  margin-left: $space-4;
+  flex-shrink: 0;
+}
+
+details[open] .compare-expand-icon {
+  transform: rotate(180deg);
+}
+
+// Side-by-side panels inside the expanded detail
+.compare-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid $color-border;
+
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.compare-panel {
+  padding: $space-5 $space-6;
+  border-right: 1px solid $color-border-light;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.compare-panel-role {
+  font-size: $text-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin-bottom: $space-2;
+  color: var(--accent, $color-text-muted);
+}
+
+.compare-panel-title {
+  font-size: $text-sm;
+  font-family: $font-serif;
+  color: $color-text-heading;
+  margin-bottom: $space-3;
+  font-weight: normal;
+  line-height: $leading-snug;
+}
+
+.compare-panel-description {
+  font-size: $text-sm;
+  color: $color-text;
+  line-height: $leading-relaxed;
+}
+
+.compare-panel-missing {
+  font-size: $text-sm;
+  color: $gray-400;
+  font-style: italic;
+}
+
+.compare-panel-link {
+  display: block;
+  margin-top: $space-3;
+  font-size: $text-xs;
+  color: $color-text-muted;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-link;
+    text-decoration: underline;
+  }
+}
+
+// Section headings within the compare view
+.compare-section-heading {
+  font-size: $text-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $color-text-muted;
+  margin: $space-8 0 $space-3;
+  padding-bottom: $space-2;
+  border-bottom: 1px solid $color-border;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

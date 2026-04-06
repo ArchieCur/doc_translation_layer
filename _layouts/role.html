@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="role-page" data-role="{{ page.role_id }}">
+
+  <header class="role-header" style="--accent: {{ page.accent_color }}">
+    <div class="container">
+      <a href="{{ site.baseurl }}/" class="back-link">&larr; All roles</a>
+      <p class="role-label">Translation Layer</p>
+      <h1>{{ page.title }}</h1>
+      <p class="role-tagline">{{ page.tagline }}</p>
+    </div>
+  </header>
+
+  <div class="role-body container">
+
+    <aside class="section-nav" aria-label="Page sections">
+      {% include section-nav.html sections=page.sections %}
+    </aside>
+
+    <main class="role-content">
+      {% for section in page.sections %}
+        <section class="capability-section" id="{{ section.id }}">
+          <h2 class="section-title">{{ section.title }}</h2>
+          {% for capability in page.capabilities %}
+            {% if capability.section == section.id %}
+              {% include capability-entry.html cap=capability role_short=page.role_short accent=page.accent_color %}
+            {% endif %}
+          {% endfor %}
+        </section>
+      {% endfor %}
+    </main>
+
+  </div>
+</div>

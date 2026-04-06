@@ -1,0 +1,123 @@
+// Landing page and role cards
+
+.home-page {
+  .site-hero {
+    background: $white;
+    border-bottom: 1px solid $color-border;
+    padding: $space-16 0 $space-12;
+    text-align: center;
+
+    h1 {
+      font-size: $text-4xl;
+      margin-bottom: $space-4;
+    }
+
+    .site-description {
+      font-size: $text-lg;
+      color: $color-text-muted;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: $leading-relaxed;
+    }
+  }
+
+  main {
+    padding-top: $space-12;
+    padding-bottom: $space-16;
+  }
+}
+
+// Role card grid
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $space-6;
+  margin-bottom: $space-10;
+}
+
+// Individual role card
+.role-card {
+  display: block;
+  background: $color-bg-card;
+  border: 1px solid $color-border;
+  border-top: 4px solid var(--accent, #aaa);
+  border-radius: $radius-md;
+  text-decoration: none;
+  color: $color-text;
+  transition: box-shadow $transition-base, transform $transition-base;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    color: $color-text;
+  }
+}
+
+.role-card-inner {
+  padding: $space-6;
+}
+
+.role-card-label {
+  font-size: $text-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $color-text-muted;
+  margin-bottom: $space-2;
+}
+
+.role-card-title {
+  font-family: $font-serif;
+  font-size: $text-2xl;
+  font-weight: normal;
+  color: $color-text-heading;
+  margin-bottom: $space-4;
+}
+
+.role-card-sections {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $space-6;
+
+  li {
+    font-size: $text-sm;
+    color: $color-text-muted;
+    padding: $space-1 0;
+    border-bottom: 1px solid $color-border-light;
+    margin-bottom: 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.role-card-cta {
+  font-size: $text-sm;
+  color: var(--accent, $color-link);
+  font-weight: 500;
+}
+
+// Compare link row
+.compare-link-row {
+  text-align: center;
+  padding-top: $space-4;
+}
+
+.compare-link {
+  display: inline-block;
+  font-size: $text-base;
+  color: $color-text-muted;
+  text-decoration: none;
+  padding: $space-3 $space-6;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $white;
+  transition: border-color $transition-base, color $transition-base;
+
+  &:hover {
+    color: $color-link;
+    border-color: $color-link;
+    text-decoration: none;
+  }
+}

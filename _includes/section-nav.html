@@ -1,0 +1,10 @@
+<nav class="section-nav-list" aria-label="Jump to section">
+  <p class="section-nav-heading">On this page</p>
+  <ul>
+    {% for section in include.sections %}
+      <li>
+        <a href="#{{ section.id }}">{{ section.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

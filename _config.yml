@@ -1,0 +1,23 @@
+title: "Claude for Non-Developers"
+description: "Role-indexed translation layers for Claude's capabilities — written in your professional vocabulary"
+baseurl: "/doc_translation_layer"
+url: "https://archiecur.github.io"
+
+collections:
+  roles:
+    output: true
+    permalink: /roles/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "roles"
+    values:
+      layout: "role"
+
+markdown: kramdown
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-sass-converter

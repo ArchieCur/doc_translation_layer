@@ -1,0 +1,125 @@
+// Capability entry, two-audience toggle, and developer view
+
+.capability-entry {
+  background: $color-bg-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $space-6;
+  margin-bottom: $space-5;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.capability-title {
+  font-size: $text-lg;
+  font-family: $font-serif;
+  color: $color-text-heading;
+  margin-bottom: $space-3;
+  line-height: $leading-snug;
+}
+
+.capability-intro {
+  font-size: $text-base;
+  color: $color-text;
+  line-height: $leading-relaxed;
+  margin-bottom: $space-4;
+}
+
+// Tab strip
+.audience-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid $color-border;
+  margin-bottom: $space-4;
+}
+
+.tab-btn {
+  font-family: $font-sans;
+  font-size: $text-sm;
+  font-weight: 500;
+  color: $color-text-muted;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: $space-2 $space-4;
+  margin-bottom: -1px;
+  cursor: pointer;
+  transition: color $transition-base, border-color $transition-base;
+
+  &:hover {
+    color: $color-text;
+  }
+
+  &.is-active {
+    color: $color-text-heading;
+    border-bottom-color: currentColor;
+  }
+}
+
+// Tab panels
+.tab-panel {
+  // visible state: default display
+  &[hidden] {
+    display: none;
+  }
+}
+
+.role-description {
+  font-size: $text-base;
+  line-height: $leading-relaxed;
+  color: $color-text;
+}
+
+// Developer links list
+.developer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $space-3;
+
+  li {
+    margin-bottom: $space-2;
+  }
+
+  a {
+    font-size: $text-sm;
+    display: inline-flex;
+    align-items: center;
+    gap: $space-1;
+
+    &::after {
+      content: " ↗";
+      font-size: $text-xs;
+      opacity: 0.6;
+    }
+  }
+}
+
+// Developer notes collapsed block
+.developer-notes {
+  border-top: 1px solid $color-border-light;
+  margin-top: $space-3;
+  padding-top: $space-3;
+
+  summary {
+    font-size: $text-sm;
+    color: $color-text-muted;
+    font-style: italic;
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+
+  .developer-notes-body {
+    margin-top: $space-3;
+    font-size: $text-sm;
+    color: $color-text-muted;
+    line-height: $leading-relaxed;
+    background: $gray-50;
+    border-left: 3px solid $color-border;
+    padding: $space-3 $space-4;
+    border-radius: 0 $radius-sm $radius-sm 0;
+  }
+}

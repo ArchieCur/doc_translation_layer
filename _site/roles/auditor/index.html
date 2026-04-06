@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude for Auditors | Claude for Non-Developers</title>
+<meta name="description" content="Role-indexed translation layers for Claude's capabilities — written in your professional vocabulary">
+<link rel="stylesheet" href="/doc_translation_layer/assets/css/main.css">
+
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="container">
+    <a href="/doc_translation_layer/" class="site-name">Claude for Non-Developers</a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="/doc_translation_layer/compare/">Compare roles</a>
+    </nav>
+  </div>
+</header>
+
+    <div class="page-wrapper">
+      <div class="role-page" data-role="auditor">
+
+  <header class="role-header" style="--accent: #2B4590">
+    <div class="container">
+      <a href="/doc_translation_layer/" class="back-link">&larr; All roles</a>
+      <p class="role-label">Translation Layer</p>
+      <h1>Claude for Auditors</h1>
+      <p class="role-tagline">Your control framework. Your evidence standards. Your language.</p>
+    </div>
+  </header>
+
+  <div class="role-body container">
+
+    <aside class="section-nav" aria-label="Page sections">
+      <nav class="section-nav-list" aria-label="Jump to section">
+  <p class="section-nav-heading">On this page</p>
+  <ul>
+    
+      <li>
+        <a href="#control-enforcement">Control & Enforcement</a>
+      </li>
+    
+      <li>
+        <a href="#evidence-audit-trail">Evidence & Audit Trail</a>
+      </li>
+    
+      <li>
+        <a href="#human-oversight">Human Oversight & Accountability</a>
+      </li>
+    
+      <li>
+        <a href="#change-management">Change Management</a>
+      </li>
+    
+  </ul>
+</nav>
+
+    </aside>
+
+    <main class="role-content">
+      
+        <section class="capability-section" id="control-enforcement">
+          <h2 class="section-title">Control & Enforcement</h2>
+          
+            
+              <div class="capability-entry" id="hooks">
+
+  <h3 class="capability-title">Programmatic Control Points That Cannot Be Bypassed</h3>
+  <p class="capability-intro">Every tool action is intercepted before execution — an architectural emergency brake that stops any operation outside your approved workflow, even if the AI was explicitly instructed to proceed.
+</p>
+
+  <div class="audience-tabs" role="tablist" aria-label="Audience view">
+    <button
+      class="tab-btn tab-role is-active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-role-hooks"
+      data-panel="panel-role-hooks">
+      For the Auditor
+    </button>
+    <button
+      class="tab-btn tab-dev"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-dev-hooks"
+      data-panel="panel-dev-hooks">
+      For the Developer
+    </button>
+  </div>
+
+  <div class="tab-panel panel-role is-active"
+       id="panel-role-hooks"
+       role="tabpanel">
+    <p class="role-description">This is the enforceable control point that separates a policy statement from a verified control. The gate exists in code, not in instructions.
+</p>
+  </div>
+
+  <div class="tab-panel panel-dev"
+       id="panel-dev-hooks"
+       role="tabpanel"
+       hidden>
+    <ul class="developer-links">
+      
+        <li>
+          <a href="https://code.claude.com/docs/en/hooks" target="_blank" rel="noopener noreferrer">
+            Hooks reference (PreToolUse / PostToolUse)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/agent-sdk/hooks" target="_blank" rel="noopener noreferrer">
+            Control execution with hooks (Agent SDK)
+          </a>
+        </li>
+      
+    </ul>
+    
+  </div>
+
+</div>
+
+            
+          
+            
+              <div class="capability-entry" id="auditor-separation-of-duties">
+
+  <h3 class="capability-title">Separation of Duties Enforced in Architecture, Not Policy</h3>
+  <p class="capability-intro">Role-based tool access structurally prevents the same identity from both initiating and approving a consequential action — not a guideline that depends on user behavior, but a control that holds under audit sampling.
+</p>
+
+  <div class="audience-tabs" role="tablist" aria-label="Audience view">
+    <button
+      class="tab-btn tab-role is-active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-role-auditor-separation-of-duties"
+      data-panel="panel-role-auditor-separation-of-duties">
+      For the Auditor
+    </button>
+    <button
+      class="tab-btn tab-dev"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-dev-auditor-separation-of-duties"
+      data-panel="panel-dev-auditor-separation-of-duties">
+      For the Developer
+    </button>
+  </div>
+
+  <div class="tab-panel panel-role is-active"
+       id="panel-role-auditor-separation-of-duties"
+       role="tabpanel">
+    <p class="role-description">The allowedTools parameter defines exactly which actions each agent or role can take. The system cannot be talked into exceeding those boundaries.
+</p>
+  </div>
+
+  <div class="tab-panel panel-dev"
+       id="panel-dev-auditor-separation-of-duties"
+       role="tabpanel"
+       hidden>
+    <ul class="developer-links">
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools" target="_blank" rel="noopener noreferrer">
+            Define tools and tool access controls
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls" target="_blank" rel="noopener noreferrer">
+            Handle tool calls and enforce boundaries
+          </a>
+        </li>
+      
+    </ul>
+    
+  </div>
+
+</div>
+
+            
+          
+            
+              <div class="capability-entry" id="tool-allowlists">
+
+  <h3 class="capability-title">Scope Containment — The System Does Only What Was Approved</h3>
+  <p class="capability-intro">Tool allowlists define precisely where the AI lives and works — what databases it can touch, what systems it can reach, what it cannot access under any circumstance — making unauthorized data access architecturally impossible, not merely prohibited.
+</p>
+
+  <div class="audience-tabs" role="tablist" aria-label="Audience view">
+    <button
+      class="tab-btn tab-role is-active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-role-tool-allowlists"
+      data-panel="panel-role-tool-allowlists">
+      For the Auditor
+    </button>
+    <button
+      class="tab-btn tab-dev"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-dev-tool-allowlists"
+      data-panel="panel-dev-tool-allowlists">
+      For the Developer
+    </button>
+  </div>
+
+  <div class="tab-panel panel-role is-active"
+       id="panel-role-tool-allowlists"
+       role="tabpanel">
+    <p class="role-description">This is your documented boundary. What is not in the allowlist cannot be executed. The AI cannot wander outside its defined environment regardless of what it is asked to do.
+</p>
+  </div>
+
+  <div class="tab-panel panel-dev"
+       id="panel-dev-tool-allowlists"
+       role="tabpanel"
+       hidden>
+    <ul class="developer-links">
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview" target="_blank" rel="noopener noreferrer">
+            Tool use overview and allowlist architecture
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/strict-tool-use" target="_blank" rel="noopener noreferrer">
+            Strict tool use (schema enforcement)
+          </a>
+        </li>
+      
+    </ul>
+    
+  </div>
+
+</div>
+
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </section>
+      
+        <section class="capability-section" id="evidence-audit-trail">
+          <h2 class="section-title">Evidence & Audit Trail</h2>
+          
+            
+          
+            
+          
+            
+          
+            
+              <div class="capability-entry" id="auditor-activity-logging">
+
+  <h3 class="capability-title">A Complete, Tamper-Evident Activity Record</h3>
+  <p class="capability-intro">Every input, tool call, output, and human review action is logged end-to-end with timestamps and session IDs — an unbroken chain of evidence that tells the complete story without requiring the developer to explain it.
+</p>
+
+  <div class="audience-tabs" role="tablist" aria-label="Audience view">
+    <button
+      class="tab-btn tab-role is-active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-role-auditor-activity-logging"
+      data-panel="panel-role-auditor-activity-logging">
+      For the Auditor
+    </button>
+    <button
+      class="tab-btn tab-dev"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-dev-auditor-activity-logging"
+      data-panel="panel-dev-auditor-activity-logging">
+      For the Developer
+    </button>
+  </div>
+
+  <div class="tab-panel panel-role is-active"
+       id="panel-role-auditor-activity-logging"
+       role="tabpanel">
+    <p class="role-description">Session IDs tie every action back to a single originating request. The log is the evidence. It does not need to be reconstructed after the fact.
+</p>
+  </div>
+
+  <div class="tab-panel panel-dev"
+       id="panel-dev-auditor-activity-logging"
+       role="tabpanel"
+       hidden>
+    <ul class="developer-links">
+      
+        <li>
+          <a href="https://code.claude.com/docs/en/monitoring-usage" target="_blank" rel="noopener noreferrer">
+            Monitoring and OpenTelemetry logging
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention" target="_blank" rel="noopener noreferrer">
+            API and data retention policies
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/build-with-claude/usage-cost-api" target="_blank" rel="noopener noreferrer">
+            Usage and Cost API
+          </a>
+        </li>
+      
+    </ul>
+    
+  </div>
+
+</div>
+
+            
+          
+            
+              <div class="capability-entry" id="structured-outputs">
+
+  <h3 class="capability-title">Consistent, Reproducible Outputs Under Identical Conditions</h3>
+  <p class="capability-intro">Structured output controls ensure the system produces the same result under the same conditions — making outputs independently verifiable by an auditor who was not present when they were generated.
+</p>
+
+  <div class="audience-tabs" role="tablist" aria-label="Audience view">
+    <button
+      class="tab-btn tab-role is-active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-role-structured-outputs"
+      data-panel="panel-role-structured-outputs">
+      For the Auditor
+    </button>
+    <button
+      class="tab-btn tab-dev"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-dev-structured-outputs"
+      data-panel="panel-dev-structured-outputs">
+      For the Developer
+    </button>
+  </div>
+
+  <div class="tab-panel panel-role is-active"
+       id="panel-role-structured-outputs"
+       role="tabpanel">
+    <p class="role-description">If you cannot reproduce an output, you cannot verify it. Structured outputs enforce a fixed schema so that results are predictable, comparable, and defensible under scrutiny.
+</p>
+  </div>
+
+  <div class="tab-panel panel-dev"
+       id="panel-dev-structured-outputs"
+       role="tabpanel"
+       hidden>
+    <ul class="developer-links">
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/build-with-claude/structured-outputs" target="_blank" rel="noopener noreferrer">
+            Structured outputs documentation
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/increase-consistency" target="_blank" rel="noopener noreferrer">
+            Increase output consistency
+          </a>
+        </li>
+      
+    </ul>
+    
+  </div>
+
+</div>
+
+            
+          
+            
+              <div class="capability-entry" id="data-retention">
+
+  <h3 class="capability-title">Evidence Integrity — The System Cannot Audit Itself</h3>
+  <p class="capability-intro">Logging architecture separates what the AI produced from the evidence used to evaluate it — AI-generated outputs cannot be used as evidence of the AI's own compliance, eliminating the circular logic that would compromise any finding.
+</p>
+
+  <div class="audience-tabs" role="tablist" aria-label="Audience view">
+    <button
+      class="tab-btn tab-role is-active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-role-data-retention"
+      data-panel="panel-role-data-retention">
+      For the Auditor
+    </button>
+    <button
+      class="tab-btn tab-dev"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-dev-data-retention"
+      data-panel="panel-dev-data-retention">
+      For the Developer
+    </button>
+  </div>
+
+  <div class="tab-panel panel-role is-active"
+       id="panel-role-data-retention"
+       role="tabpanel">
+    <p class="role-description">Your evidence sources and your AI system are architecturally separate. The system being evaluated does not control the record of its own behavior.
+</p>
+  </div>
+
+  <div class="tab-panel panel-dev"
+       id="panel-dev-data-retention"
+       role="tabpanel"
+       hidden>
+    <ul class="developer-links">
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention" target="_blank" rel="noopener noreferrer">
+            API and data retention (separation of logs from outputs)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention" target="_blank" rel="noopener noreferrer">
+            Zero Data Retention options
+          </a>
+        </li>
+      
+    </ul>
+    
+  </div>
+
+</div>
+
+            
+          
+            
+          
+            
+          
+            
+          
+        </section>
+      
+        <section class="capability-section" id="human-oversight">
+          <h2 class="section-title">Human Oversight & Accountability</h2>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <div class="capability-entry" id="auditor-human-review-gates">
+
+  <h3 class="capability-title">Human Review Gates That Are Visible When Skipped</h3>
+  <p class="capability-intro">Human approval workflows create an accountable record of every review — and every instance where review did not occur — so the gap between documented policy and actual practice is measurable, not invisible.
+</p>
+
+  <div class="audience-tabs" role="tablist" aria-label="Audience view">
+    <button
+      class="tab-btn tab-role is-active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-role-auditor-human-review-gates"
+      data-panel="panel-role-auditor-human-review-gates">
+      For the Auditor
+    </button>
+    <button
+      class="tab-btn tab-dev"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-dev-auditor-human-review-gates"
+      data-panel="panel-dev-auditor-human-review-gates">
+      For the Developer
+    </button>
+  </div>
+
+  <div class="tab-panel panel-role is-active"
+       id="panel-role-auditor-human-review-gates"
+       role="tabpanel">
+    <p class="role-description">A control that was skipped sixty percent of the time is a finding. This architecture makes skipped reviews visible in the log — they cannot be hidden by the system or by user behavior.
+</p>
+  </div>
+
+  <div class="tab-panel panel-dev"
+       id="panel-dev-auditor-human-review-gates"
+       role="tabpanel"
+       hidden>
+    <ul class="developer-links">
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/agent-sdk/permissions" target="_blank" rel="noopener noreferrer">
+            Handling permissions and user approvals (Agent SDK)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/agent-sdk/hooks" target="_blank" rel="noopener noreferrer">
+            Control execution with hooks
+          </a>
+        </li>
+      
+    </ul>
+    
+  </div>
+
+</div>
+
+            
+          
+            
+              <div class="capability-entry" id="ai-disclosure">
+
+  <h3 class="capability-title">AI Assistance Disclosure Built Into the Methodology</h3>
+  <p class="capability-intro">Every AI-assisted analysis is identifiable in the output record — providing the full transparency needed when findings are challenged, and the documented methodology defense an auditor needs when legal admissibility is questioned.
+</p>
+
+  <div class="audience-tabs" role="tablist" aria-label="Audience view">
+    <button
+      class="tab-btn tab-role is-active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-role-ai-disclosure"
+      data-panel="panel-role-ai-disclosure">
+      For the Auditor
+    </button>
+    <button
+      class="tab-btn tab-dev"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-dev-ai-disclosure"
+      data-panel="panel-dev-ai-disclosure">
+      For the Developer
+    </button>
+  </div>
+
+  <div class="tab-panel panel-role is-active"
+       id="panel-role-ai-disclosure"
+       role="tabpanel">
+    <p class="role-description">Emerging audit standards require disclosure of AI involvement in findings and recommendations. This is not optional. The output record makes that disclosure automatic and consistent rather than dependent on human memory.
+</p>
+  </div>
+
+  <div class="tab-panel panel-dev"
+       id="panel-dev-ai-disclosure"
+       role="tabpanel"
+       hidden>
+    <ul class="developer-links">
+      
+        <li>
+          <a href="https://code.claude.com/docs/en/monitoring-usage" target="_blank" rel="noopener noreferrer">
+            Monitoring usage and output attribution
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/agent-sdk/sessions" target="_blank" rel="noopener noreferrer">
+            Session management and traceability
+          </a>
+        </li>
+      
+    </ul>
+    
+  </div>
+
+</div>
+
+            
+          
+            
+          
+        </section>
+      
+        <section class="capability-section" id="change-management">
+          <h2 class="section-title">Change Management</h2>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <div class="capability-entry" id="model-version-control">
+
+  <h3 class="capability-title">Model Version Control as a Change Event</h3>
+  <p class="capability-intro">Every model update, prompt change, and configuration modification is a documented change event with before and after states — unlike spreadsheets or standard software that overwrite without record, giving auditors a versioned history of exactly what the system was doing and when.
+</p>
+
+  <div class="audience-tabs" role="tablist" aria-label="Audience view">
+    <button
+      class="tab-btn tab-role is-active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-role-model-version-control"
+      data-panel="panel-role-model-version-control">
+      For the Auditor
+    </button>
+    <button
+      class="tab-btn tab-dev"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-dev-model-version-control"
+      data-panel="panel-dev-model-version-control">
+      For the Developer
+    </button>
+  </div>
+
+  <div class="tab-panel panel-role is-active"
+       id="panel-role-model-version-control"
+       role="tabpanel">
+    <p class="role-description">A model update that changes system behavior is a change event under any IT governance framework. It must be documented, tested, approved, and logged — and this architecture supports exactly that requirement.
+</p>
+  </div>
+
+  <div class="tab-panel panel-dev"
+       id="panel-dev-model-version-control"
+       role="tabpanel"
+       hidden>
+    <ul class="developer-links">
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">
+            Model overview and version documentation
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">
+            Model deprecations and migration guidance
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://platform.claude.com/docs/en/build-with-claude/administration-api" target="_blank" rel="noopener noreferrer">
+            Admin API for organizational change tracking
+          </a>
+        </li>
+      
+    </ul>
+    
+  </div>
+
+</div>
+
+            
+          
+        </section>
+      
+    </main>
+
+  </div>
+</div>
+
+    </div>
+    <footer class="site-footer">
+  <div class="container">
+    <p>
+      <a href="/doc_translation_layer/">Claude for Non-Developers</a>
+      &nbsp;&middot;&nbsp;
+      <a href="/doc_translation_layer/compare/">Compare roles</a>
+    </p>
+    <p class="footer-credit">
+      ArchieCur &middot; Sonnet 4.6 (Anthropic) &middot; Claude Code &middot; MIT License &middot; 2026
+    </p>
+  </div>
+</footer>
+
+    <script src="/doc_translation_layer/assets/js/toggle.js"></script>
+    
+  </body>
+</html>

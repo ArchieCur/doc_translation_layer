@@ -1,0 +1,52 @@
+<div class="capability-entry" id="{{ include.cap.id }}">
+
+  <h3 class="capability-title">{{ include.cap.title }}</h3>
+  <p class="capability-intro">{{ include.cap.intro }}</p>
+
+  <div class="audience-tabs" role="tablist" aria-label="Audience view">
+    <button
+      class="tab-btn tab-role is-active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-role-{{ include.cap.id }}"
+      data-panel="panel-role-{{ include.cap.id }}">
+      For the {{ include.role_short }}
+    </button>
+    <button
+      class="tab-btn tab-dev"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-dev-{{ include.cap.id }}"
+      data-panel="panel-dev-{{ include.cap.id }}">
+      For the Developer
+    </button>
+  </div>
+
+  <div class="tab-panel panel-role is-active"
+       id="panel-role-{{ include.cap.id }}"
+       role="tabpanel">
+    <p class="role-description">{{ include.cap.role_description }}</p>
+  </div>
+
+  <div class="tab-panel panel-dev"
+       id="panel-dev-{{ include.cap.id }}"
+       role="tabpanel"
+       hidden>
+    <ul class="developer-links">
+      {% for link in include.cap.developer_links %}
+        <li>
+          <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+            {{ link.label }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    {% if include.cap.developer_notes and include.cap.developer_notes != "" %}
+    <details class="developer-notes">
+      <summary>Developer notes</summary>
+      <div class="developer-notes-body">{{ include.cap.developer_notes }}</div>
+    </details>
+    {% endif %}
+  </div>
+
+</div>
