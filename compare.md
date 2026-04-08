@@ -2,6 +2,7 @@
 layout: default
 title: "Compare Capabilities"
 description: "See how Claude's capabilities translate across professional roles — side by side."
+permalink: /compare/
 ---
 
 <div class="compare-page">
